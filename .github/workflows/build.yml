@@ -48,11 +48,11 @@ jobs:
         shell: bash
         run: |
           tar -zxvf riot-*.tar.gz -C /tmp
-          xargs -n1 cp -pr /tmp/riot-* <<< "innereq thecore"
-          mv innereq.jpg innereq/background.jpg
-          mv innereq.json innereq/config.json
-          mv thecore.png thecore/background.png
-          mv thecore.json thecore/config.json
+          xargs -n1 cp -pr /tmp/riot-* <<< "innereq/element-innereq thecore/element-thecore"
+          mv innereq.jpg innereq/element-innereq/background.jpg
+          mv innereq.json innereq/element-innereq/config.json
+          mv thecore.png thecore/element-thecore/background.png
+          mv thecore.json thecore/element-thecore/config.json
 
       - name: "Upload Element package for Inner Equestria"
         uses: actions/upload-artifact@v2
@@ -85,4 +85,4 @@ jobs:
       - name: "Debug"
         shell: bash
         run: |
-          ls innereq thecore
+          ls element-innereq element-thecore
