@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  package:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,10 +31,10 @@ jobs:
           name: element
           path: dist/riot-*.tar.gz
 
-  deploy:
+  package:
     runs-on: ubuntu-latest
 
-    needs: package
+    needs: build
 
     steps:
       - uses: actions/checkout@v2
@@ -49,4 +49,40 @@ jobs:
         run: |
           tar -zxvf riot-*.tar.gz -C /tmp
           xargs -n1 cp -pr /tmp/riot-* <<< "innereq thecore"
+          mv innereq.jpg innereq/background.jpg
+          mv innereq.json innereq/config.json
+          mv thecore.png thecore/background.png
+          mv thecore.json thecore/config.json
+
+      - name: "Upload Element package for Inner Equestria"
+        uses: actions/upload-artifact@v2
+        with:
+          name: element-innereq
+          path: innereq
+
+      - name: "Upload Element package for The Core"
+        uses: actions/upload-artifact@v2
+        with:
+          name: element-thecore
+          path: thecore
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: package
+
+    steps:
+      - name: "Unpack Element package for Inner Equestria"
+        uses: actions/download-artifact@v2
+        with:
+          name: element-innereq
+
+      - name: "Unpack Element package for The Core"
+        uses: actions/download-artifact@v2
+        with:
+          name: element-thecore
+
+      - name: "Debug"
+        shell: bash
+        run: |
           ls innereq thecore

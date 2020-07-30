@@ -1,0 +1,113 @@
+{
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://terminal.thecore.city",
+            "server_name": "thecore.city"
+        },
+        "m.identity_server": {
+            "base_url": "https://vector.im"
+        }
+    },
+    "disable_custom_urls": false,
+    "disable_guests": false,
+    "disable_login_language_selector": false,
+    "disable_3pid_login": false,
+    "brand": "The Core",
+    "branding": {
+      "welcomeBackgroundUrl": "https://terminal.thecore.city/_matrix/client/background.png",
+      "authFooterLinks": [
+        {"text": "The Core (Discord)", "url": "https://thecore.city"},
+        {"text": "Files", "url": "https://files.thecore.city"}
+      ]
+    },
+    "integrations_ui_url": "https://dimension.sunbutt.faith/riot",
+    "integrations_rest_url": "https://dimension.sunbutt.faith/api/v1/scalar",
+    "integrations_widgets_urls": ["https://dimension.sunbutt.faith/widgets"],
+    "integrations_jitsi_widget_url": "https://dimension.sunbutt.faith/widgets/jitsi",
+    "bug_report_endpoint_url": "https://riot.im/bugreports/submit",
+    "defaultCountryCode": "GB",
+    "showLabsSettings": true,
+    "features": {
+        "feature_new_spinner": "labs",
+        "feature_pinning": "labs",
+        "feature_custom_status": "labs",
+        "feature_custom_tags": "labs",
+        "feature_state_counters": "labs",
+        "feature_many_integration_managers": "labs",
+        "feature_mjolnir": "labs",
+        "feature_dm_verification": "labs",
+        "feature_bridge_state": "labs",
+        "feature_presence_in_room_list": "labs",
+        "feature_custom_themes": "labs"
+    },
+    "default_federate": true,
+    "default_theme": "dark",
+    "roomDirectory": {
+        "servers": [
+            "thecore.city",
+            "sunbutt.faith",
+	        "ponies.im",
+	        "matrix.org"
+        ]
+    },
+    "welcomeUserId": "@riot-bot:matrix.org",
+    "piwik": {
+        "url": "https://piwik.riot.im/",
+        "whitelistedHSUrls": ["https://thecore.city", "https://matrix.org"],
+        "whitelistedISUrls": ["https://vector.im", "https://matrix.org"],
+        "siteId": 1
+    },
+    "enable_presence_by_hs_url": {
+        "https://matrix.org": false,
+        "https://matrix-client.matrix.org": false
+    },
+    "settingDefaults": {
+        "breadcrumbs": true,
+        "custom_themes": [
+            {
+                "name": "Discordant theme",
+                "is_dark": true,
+                "colors": {
+                    "accent-color": "#7289DA",
+                    "primary-color": "#00b0f4",
+                    "warning-color": "#f04747",
+
+                    "sidebar-color": "#23272A",
+                    "roomlist-background-color": "#2f3136",
+                    "roomlist-text-color": "#FFFFFF",
+                    "roomlist-text-secondary-color": "#99AAB5",
+                    "roomlist-highlights-color": "#393c42",
+                    "roomlist-separator-color": "#36393f",
+
+                    "timeline-background-color": "#36393f",
+                    "timeline-text-color": "#FFFFFF",
+                    "timeline-text-secondary-color": "#99AAB5",
+                    "timeline-highlights-color": "#32353b",
+                    "reaction-row-button-selected-bg-color": "#b9bbbe"
+                }
+            },
+            {
+                "name": "Nord light theme",
+                "is_dark": false,
+                "colors": {
+                    "accent-color": "#a3be8c",
+                    "primary-color": "#5e81ac",
+                    "warning-color": "#bf616a",
+
+                    "sidebar-color": "#d8dee9",
+                    "roomlist-background-color": "#e5e9f0",
+                    "roomlist-text-color": "#d08770",
+                    "roomlist-text-secondary-color": "#3b4252",
+                    "roomlist-highlights-color": "#eceff4",
+                    "roomlist-separator-color": "#eceff4",
+
+                    "timeline-background-color": "#eceff4",
+                    "timeline-text-color": "#2e3440",
+                    "timeline-text-secondary-color": "#3b4252",
+                    "timeline-highlights-color": "#e5e9f0",
+                    "reaction-row-button-selected-bg-color": "#bf616a"
+                }
+            }
+        ]
+    }
+}
