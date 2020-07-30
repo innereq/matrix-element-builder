@@ -49,11 +49,11 @@ jobs:
         run: |
           tar -zxvf riot-*.tar.gz -C /tmp
           mkdir innereq thecore
-          xargs -n1 cp -pr /tmp/riot-* <<< "innereq/element-innereq thecore/element-thecore"
-          mv innereq.jpg innereq/element-innereq/background.jpg
-          mv innereq.json innereq/element-innereq/config.json
-          mv thecore.png thecore/element-thecore/background.png
-          mv thecore.json thecore/element-thecore/config.json
+          xargs -n1 cp -pr /tmp/riot-* <<< "innereq/gospel.sunbutt.faith thecore/terminal.thecore.city"
+          mv innereq.jpg innereq/gospel.sunbutt.faith/background.jpg
+          mv innereq.json innereq/gospel.sunbutt.faith/config.json
+          mv thecore.png thecore/terminal.thecore.city/background.png
+          mv thecore.json thecore/terminal.thecore.city/config.json
 
       - name: "Upload Element package for Inner Equestria"
         uses: actions/upload-artifact@v2
@@ -90,7 +90,7 @@ jobs:
           username: ${{ secrets.CI_DEPLOYER_SSH_USER }}
           key: ${{ secrets.CI_DEPLOYER_SSH_KEY_INNEREQ }}
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
-          source: "element-innereq/*"
+          source: gospel.sunbutt.faith
           target: /srv/http/gospel.sunbutt.faith
           rm: true
 
@@ -101,6 +101,6 @@ jobs:
           username: ${{ secrets.CI_DEPLOYER_SSH_USER }}
           key: ${{ secrets.CI_DEPLOYER_SSH_KEY_THECORE }}
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
-          source: "element-thecore/*"
+          source: terminal.thecore.city
           target: /srv/http/terminal.thecore.city
           rm: true
