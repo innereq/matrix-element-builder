@@ -48,6 +48,7 @@ jobs:
         shell: bash
         run: |
           tar -zxvf riot-*.tar.gz -C /tmp
+          mkdir innereq thecore
           xargs -n1 cp -pr /tmp/riot-* <<< "innereq/element-innereq thecore/element-thecore"
           mv innereq.jpg innereq/element-innereq/background.jpg
           mv innereq.json innereq/element-innereq/config.json
