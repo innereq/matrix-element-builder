@@ -1,0 +1,25 @@
+name: "Daily Integration"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: vector-im/riot-web
+
+      - name: "Install Node toolchain"
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: "Build frontend code"
+        run: |
+          ./scripts/fetch-develop.deps.sh --depth 1
+          yarn
+          ./scripts/ci_package.sh
