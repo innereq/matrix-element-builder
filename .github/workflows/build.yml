@@ -90,7 +90,7 @@ jobs:
           username: ${{ secrets.CI_DEPLOYER_SSH_USER }}
           key: ${{ secrets.CI_DEPLOYER_SSH_KEY_INNEREQ }}
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
-          source: element-innereq
+          source: "element-innereq/*"
           target: /srv/http/gospel.sunbutt.faith
           rm: true
 
@@ -101,6 +101,6 @@ jobs:
           username: ${{ secrets.CI_DEPLOYER_SSH_USER }}
           key: ${{ secrets.CI_DEPLOYER_SSH_KEY_THECORE }}
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
-          source: element-thecore
+          source: "element-thecore/*"
           target: /srv/http/terminal.thecore.city
           rm: true
