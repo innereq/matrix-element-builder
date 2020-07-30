@@ -92,6 +92,7 @@ jobs:
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
           source: gospel.sunbutt.faith
           target: /srv/http/gospel.sunbutt.faith
+          strip_components: 1
           rm: true
 
       - name: "Deploy Element to The Core"
@@ -103,4 +104,5 @@ jobs:
           port: ${{ secrets.CI_DEPLOYER_SSH_PORT }}
           source: terminal.thecore.city
           target: /srv/http/terminal.thecore.city
+          strip_components: 1
           rm: true
