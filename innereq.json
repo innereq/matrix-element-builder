@@ -23,7 +23,7 @@
         {"text": "Derpy's Mail Post", "url": "https://derpy.email"}
       ]
     },
-    "integrations_ui_url": "https://dimension.sunbutt.faith/riot",
+    "integrations_ui_url": "https://dimension.sunbutt.faith/element",
     "integrations_rest_url": "https://dimension.sunbutt.faith/api/v1/scalar",
     "integrations_widgets_urls": ["https://dimension.sunbutt.faith/widgets"],
     "integrations_jitsi_widget_url": "https://dimension.sunbutt.faith/widgets/jitsi",
