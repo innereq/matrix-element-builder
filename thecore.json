@@ -14,7 +14,7 @@
     "disable_3pid_login": false,
     "brand": "The Core",
     "branding": {
-      "welcomeBackgroundUrl": "https://terminal.thecore.city/_matrix/client/background.png",
+      "welcomeBackgroundUrl": "https://terminal.thecore.city/_matrix/client/background.jpg",
       "authFooterLinks": [
         {"text": "The Core (Discord)", "url": "https://thecore.city"},
         {"text": "Files", "url": "https://files.thecore.city"}
