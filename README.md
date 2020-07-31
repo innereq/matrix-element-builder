@@ -4,7 +4,7 @@
 
 It does some things for us:
 
-- Builds an upstream development version of Element.
-- Applies tiny instance-specific changes.
-- Deploys to our servers.
-- Every day! Actually, every night, but whatever.
+- builds an upstream development version of Element;
+- applies tiny instance-specific changes;
+- deploys to our servers;
+- every day! Actually, every night, but whatever.
