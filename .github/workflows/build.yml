@@ -52,7 +52,7 @@ jobs:
           xargs -n1 cp -pr /tmp/riot-* <<< "innereq/gospel.sunbutt.faith thecore/terminal.thecore.city"
           mv innereq.jpg innereq/gospel.sunbutt.faith/background.jpg
           mv innereq.json innereq/gospel.sunbutt.faith/config.json
-          mv thecore.png thecore/terminal.thecore.city/background.png
+          mv thecore.jpg thecore/terminal.thecore.city/background.jpg
           mv thecore.json thecore/terminal.thecore.city/config.json
 
       - name: "Upload Element package for Inner Equestria"
