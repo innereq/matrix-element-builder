@@ -1,6 +1,6 @@
 # Matrix Element Builder
 
-![Daily Integration](https://github.com/innereq/matrix-element-builder/workflows/Daily%20Integration/badge.svg)
+[![Daily Integration](https://github.com/innereq/matrix-element-builder/workflows/Daily%20Integration/badge.svg)](https://github.com/innereq/matrix-element-builder/actions?query=workflow%3A"Daily+Integration")
 
 It does some things for us:
 
