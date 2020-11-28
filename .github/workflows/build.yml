@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: vector-im/riot-web
+          repository: vector-im/element-web
 
       - name: "Install Node toolchain"
         uses: actions/setup-node@v1
@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: element
-          path: dist/riot-*.tar.gz
+          path: dist/element-*.tar.gz
 
   package:
     runs-on: ubuntu-latest
@@ -47,9 +47,9 @@ jobs:
       - name: "Prepare Element for deployment"
         shell: bash
         run: |
-          tar -zxvf riot-*.tar.gz -C /tmp
+          tar -zxvf element-*.tar.gz -C /tmp
           mkdir innereq thecore
-          xargs -n1 cp -pr /tmp/riot-* <<< "innereq/gospel.sunbutt.faith thecore/terminal.thecore.city"
+          xargs -n1 cp -pr /tmp/element-* <<< "innereq/gospel.sunbutt.faith thecore/terminal.thecore.city"
           mv innereq.jpg innereq/gospel.sunbutt.faith/background.jpg
           mv innereq.json innereq/gospel.sunbutt.faith/config.json
           mv thecore.jpg thecore/terminal.thecore.city/background.jpg
